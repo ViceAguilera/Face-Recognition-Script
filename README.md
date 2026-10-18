@@ -1,115 +1,76 @@
 # Reconocimiento facial con OpenCV
 
-###### ***🚧 V1.0  Pre-Alpha development.🚧🔨***
+Conjunto de tres scripts en Python que capturan rostros desde la cámara web, entrenan un modelo LBPH y reconocen personas en tiempo real.
 
-_Sistema de reconocimiento facial en tiempo real, con procesos separados para la comprensión de sistemas similares_
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat&logo=python&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-contrib-5C3EE8?style=flat&logo=opencv&logoColor=white)
+![Licencia](https://img.shields.io/badge/licencia-MIT-green?style=flat)
+![Último commit](https://img.shields.io/github/last-commit/ViceAguilera/Face-Recognition-Script?style=flat)
 
-## Construido con 🛠️
+## Descripción
 
-- [Python v3.11](https://www.python.org/) - Lenguaje de programación
-- [OpenCV](https://opencv.org/) - Librería de visión artificial
-- [Imutils](https://www.jaided.ai/easyocr/) - Librería simplificada de imagenes
+Proyecto de aprendizaje que separa el flujo de reconocimiento facial en tres procesos independientes (captura, entrenamiento y reconocimiento) para entender cómo se relaciona cada etapa. Está en estado de desarrollo temprano (pre-alpha).
 
-## Comenzando 🚀
+## Características
 
-### Instalacion  🔧
+- Captura hasta 1000 imágenes del rostro por persona (150x150 px) con detección Haar Cascade.
+- Entrena un reconocedor `LBPHFaceRecognizer` y guarda el modelo en `FacesModel.xml`.
+- Reconoce rostros en tiempo real y muestra el nombre o "Desconocido" sobre el video.
+- Se cierra con la tecla `q`.
 
-<details>
-   <summary>Linux</summary>
+## Tecnologías
 
-1. Se clona el repositorio de GitHub
-    ```bash
-    git clone https://github.com/ViceAguilera/face-recognition-script.git
-    ```
-  
-2. Se ingresa a la carpeta del proyecto
-    ```bash
-    cd face-recognition-script
-    ```
-  
-3. Se crea un entorno virtual
-    ```bash
-    python3 -m venv venv
-    ```
-    
-4. Se activa el entorno virtual
-    ```bash
-    source venv/bin/activate
-    ```
+- Python 3.11
+- OpenCV (`opencv-contrib-python`)
+- Imutils
 
-5. Se instala los requerimientos del proyecto
-    ```bash
-    pip3 install -r requirements.txt
-    ```
+## Requisitos
 
-6. Descarga el algoritmo de deteccion de rostros [Haar Cascade Face Default](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml) y se agrega a la carpeta.
+- Python 3 y una cámara web.
+- Dependencias de `requirements.txt`.
 
-7. Se ejecuta el script para "escanear" la cara
-    ```bash
-    python3 ImageCapture.py
-    ```
-    
-8. Se ejecuta el script para "entrenar" el modelo
-    ```bash
-    python3 TrainModel.py
-    ```
-    
-9. Se ejecuta el script para "reconocer" la cara y disfruta
-    ```bash
-    python3 FaceRecognition.py
-    ```
-</details>
+## Instalación
 
-<details>
-  <summary>Windows</summary>
+```bash
+git clone https://github.com/ViceAguilera/Face-Recognition-Script.git
+cd Face-Recognition-Script
+python -m venv venv
+source venv/bin/activate   # En Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-1. Se clona el repositorio de GitHub
-    ```bash
-    git clone https://github.com/ViceAguilera/face-recognition-script.git
-    ```
-  
-2. Se ingresa a la carpeta del proyecto
-    ```bash
-    cd face-recognition-script
-    ```
-  
-3. Se crea un entorno virtual
-    ```bash
-    python -m venv venv
-    ```
-    
-4. Se activa el entorno virtual
-    ```bash
-    source venv/bin/activate
-    ```
+> **Importante:** los tres scripts tienen la variable `dataPath` con una ruta absoluta del equipo original (`/home/sirius/PycharmProjects/FaceRecognition/Data`). Edítala para que apunte a la carpeta `Data/` de tu copia del proyecto antes de ejecutar.
 
-5. Se instala los requerimientos del proyecto
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Uso
 
-6. Descarga el algoritmo de deteccion de rostros [Haar Cascade Face Default](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml) y se agrega a la carpeta.
+1. Capturar rostros (pide el nombre de la persona y crea `Data/<nombre>/`):
+   ```bash
+   python ImageCapture.py
+   ```
+2. Entrenar el modelo (genera `FacesModel.xml`):
+   ```bash
+   python TrainModel.py
+   ```
+3. Reconocer en tiempo real:
+   ```bash
+   python FaceRecognition.py
+   ```
 
-7. Se ejecuta el script para "escanear" la cara
-    ```bash
-    python ImageCapture.py
-    ```
-    
-8. Se ejecuta el script para "entrenar" el modelo
-    ```bash
-    python TrainModel.py
-    ```
-    
-9. Se ejecuta el script para "reconocer" la cara y disfruta
-    ```bash
-    python FaceRecognition.py
-    ```
-</details>
-   
-## Licencia 📄
+## Estructura del proyecto
 
-Este proyecto está bajo el _MIT LICENSE_ - mira el archivo [LICENSE](LICENSE) para detalles
+```
+ImageCapture.py                      # Captura de rostros desde la cámara
+TrainModel.py                        # Entrenamiento del modelo LBPH
+FaceRecognition.py                   # Reconocimiento en tiempo real
+haarcascade_frontalface_default.xml  # Clasificador Haar Cascade
+Data/                                # Imágenes de rostros por persona
+requirements.txt
+```
 
-## Autores ✒️
+## Licencia
 
-[**Vicente Aguilera Arias**](https://github.com/ViceAguilera)
+Distribuido bajo la licencia MIT. Ver [LICENSE](LICENSE).
+
+## Autor
+
+**Vicente Aguilera Arias** — [Portafolio](https://portfolio.iamsirius.cl) · [GitHub](https://github.com/ViceAguilera) · [LinkedIn](https://www.linkedin.com/in/vicenteaguilera/)
