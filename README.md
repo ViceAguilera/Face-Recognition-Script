@@ -4,12 +4,33 @@ Conjunto de tres scripts en Python que capturan rostros desde la cámara web, en
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=flat&logo=python&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-contrib-5C3EE8?style=flat&logo=opencv&logoColor=white)
-![Licencia](https://img.shields.io/badge/licencia-MIT-green?style=flat)
+![Estado](https://img.shields.io/badge/estado-ejercicio%20académico-lightgrey?style=flat)
+![Licencia](https://img.shields.io/badge/licencia-MIT-blue?style=flat)
 ![Último commit](https://img.shields.io/github/last-commit/ViceAguilera/Face-Recognition-Script?style=flat)
+
+<!-- Demo: agrega una captura o GIF en docs/demo.gif y descomenta la línea siguiente -->
+<!-- <p align="center"><img src="docs/demo.gif" alt="Demostración del reconocimiento facial" width="800"></p> -->
+
+## Tabla de contenidos
+
+- [Descripción](#descripción)
+- [Estado del proyecto](#estado-del-proyecto)
+- [Características](#características)
+- [Tecnologías](#tecnologías)
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Licencia](#licencia)
+- [Autor](#autor)
 
 ## Descripción
 
 Proyecto de aprendizaje que separa el flujo de reconocimiento facial en tres procesos independientes (captura, entrenamiento y reconocimiento) para entender cómo se relaciona cada etapa. Está en estado de desarrollo temprano (pre-alpha).
+
+## Estado del proyecto
+
+**Ejercicio académico.** Proyecto de aprendizaje en estado pre-alpha, sin planes de ampliación.
 
 ## Características
 
